@@ -48,4 +48,5 @@ mkdir build
 cd build
 ../configure --prefix=$current_dir/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14 --host=riscv64-unknown-elf
 ```
+b
 
