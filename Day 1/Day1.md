@@ -12,7 +12,7 @@ Open your terminal and run the following command to create a  ```.c```  file.
 vim lab1/sum1ton.c 
 ``` 
 
-This C program sums up numbers from 1 to n:
+This [C program](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day%201/sum1ton.c) sums up numbers from 1 to n:
 
 ```c
 #include<stdio.h>
