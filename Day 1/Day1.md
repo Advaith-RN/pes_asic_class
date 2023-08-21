@@ -11,14 +11,16 @@ This [C program](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day%201/
 ```c
 #include<stdio.h>
 
-int main(){
-	int sum = 0, n=50;
+int main()
+{
+	int i, sum = 0;
+	int n = 50;
 
-	for(int i= 0; i <= n; ++i){
-		sum += i;
+	for(i = 0;i <= n; i++)
+	{
+		sum+=i;
 	}
-
-	printf("Sum from 1 to %d is %d", n, sum);
+	printf("Sum from 1 to %d = %d\n", n, sum);
 	return 0;
 }
 ```
@@ -35,7 +37,7 @@ This runs it using gcc, on our machine.
 cat lab1/sum1ton.c
 ```
 
-Gives the output ```Sum from 1 to 50 is 1275```
+Gives the output ```Sum from 1 to 50 = 1275```
 
 
 ### C to Disassembly 
