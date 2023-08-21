@@ -1,10 +1,4 @@
-
-### Dependencies
-
-- Follow the instruction in the ``` README ``` to install the relevant tools:
-	- [RISC-V GNU Compiler Toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain)
-	- [RISC-V Proxy Kernel](https://github.com/riscv-software-src/riscv-pk)
-	- [RISC-V  Spike](https://github.com/riscv-software-src/riscv-isa-sim)
+# Day 1
 
 Open your terminal and run the following command to create a  ```.c```  file. 
 
