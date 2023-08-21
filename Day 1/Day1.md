@@ -59,9 +59,12 @@ ls -ltr sum1ton.o
 ```bash
 riscv64-unknown-elf-objdump -d  sum1ton.o 
 ```
+![ss3](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/1f5d56c5-ad56-4600-9d15-c081d10385d9)
 
 - Repeating the above but with ``` ofast ``` :
 
 ```bash
 riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
+
+![ss2](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9c6fcd96-e9d2-4960-9ffe-5b344ed5885c)
