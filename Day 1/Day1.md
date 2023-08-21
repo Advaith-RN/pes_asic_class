@@ -2,7 +2,7 @@
 
 Open your terminal and run the following command to create a  ```.c```  file. 
 
-```bash 
+```shell 
 vim lab1/sum1ton.c 
 ``` 
 
@@ -27,13 +27,13 @@ int main()
 
 - To run the above code use :
 
-```shell 
+```bash 
 gcc lab1/sum1ton.c
 ```
 
 This runs it using gcc, on our machine.
 
-```bash
+```shell
 cat lab1/sum1ton.c
 ```
 
@@ -55,12 +55,12 @@ ls -ltr sum1ton.o
 
 - To view the assembly code:
 
-```shell
+```bash
 riscv64-unknown-elf-objdump -d  sum1ton.o 
 ```
 
 - Repeating the above but with ``` ofast ``` :
 
-``` shell
+```bash
 riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
