@@ -24,6 +24,7 @@ int main()
 	return 0;
 }
 ```
+![ss1](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/e664b5cc-7f2c-4db7-aa06-837c28c15c7b)
 
 - To run the above code use :
 
