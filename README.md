@@ -36,5 +36,6 @@ ____System Software____
 
 ## Course Content
 ### [LAB 1](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day%201/Day1.md)
+### [LAB 2](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day%201/Day1.md)
 
 
