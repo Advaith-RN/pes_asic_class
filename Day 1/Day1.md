@@ -1,5 +1,5 @@
 # Day 1
-
+## Sum 1 to n program
 Open your terminal and run the following command to create a  ```.c```  file. 
 
 ```shell 
@@ -68,3 +68,24 @@ riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
 
 ![ss2](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9c6fcd96-e9d2-4960-9ffe-5b344ed5885c)
+
+## Signed and Unsigned Integers
+
+Put this code in a c file unsignedHighest.c to calculate the largest int.
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	unsigned long long int max = (unsigned long long int) (pow(2,64) -1);
+	printf("Largest unsigned long long int = %llu/n", max);
+	return 0;
+}
+```
+Compile the code and view output using:
+```bash
+riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+
+spike pk -d unsignedHighest.o
+```
+
