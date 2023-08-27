@@ -5,10 +5,10 @@ This repository contains notes for the process of complete ASIC flow.
 ## Introduction
 ```ASCII
    HLL         ALP       Binary      (HDL)       GDS
-  +------+   +-----+   +--------+   +-----+   +--------+
-  | Code |-> | Asm |-> | Machine|-> | RTL |-> | Layout |
-  |  Gen |   | Gen |   |  Code  |   |Synth|   | Design |
-  +------+   +-----+   +--------+   +-----+   +--------+
+  +------+   +-----+   +---------+   +-----+   +--------+
+  | Code |-> | Asm |-> | Machine |-> | RTL |-> | Layout |
+  |  Gen |   | Gen |   |  Code   |   |Synth|   | Design |
+  +------+   +-----+   +---------+   +-----+   +--------+
 
 ```
 #### 1. HLL -> High level language (c , c++) 
