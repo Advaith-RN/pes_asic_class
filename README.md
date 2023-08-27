@@ -35,7 +35,7 @@ ____System Software____
 - GDS : Layout
 
 ## Course Content
-### [LAB 1](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day%201/Day1.md)
-### [LAB 2](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day%202/Day2.md)
+### [LAB 1](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day1/Day1.md)
+### [LAB 2](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day2/Day2.md)
 
 
