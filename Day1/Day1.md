@@ -84,7 +84,7 @@ int main(){
 ```
 Compile the code and view output using:
 ```bash
-riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o unsignedHighest.o unsignedHighest.c
 
 spike pk -d unsignedHighest.o
 ```
