@@ -103,12 +103,3 @@ spike pk -o 1to9.o
 ```
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a7011089-51c3-4d25-8c3b-9f71180b3065)
 
-
-
-## Basic Verification flow with iVerilog
-Clone the repo to get started.
-```
-git clone https://github.com/kunalg123/riscv_workshop_collaterals.git
-```
-
-
