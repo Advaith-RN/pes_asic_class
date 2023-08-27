@@ -68,6 +68,7 @@ riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
 
 ![ss2](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9c6fcd96-e9d2-4960-9ffe-5b344ed5885c)
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/04e590c3-a2b4-48e7-83b4-dbd6f5bf5df5)
 
 ## Signed and Unsigned Integers
 
@@ -88,4 +89,6 @@ riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o unsignedHighest.o unsi
 
 spike pk -d unsignedHighest.o
 ```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/adb88e61-6c96-41ec-a443-da9a089d41a2)
+
 
