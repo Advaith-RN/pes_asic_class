@@ -1,6 +1,9 @@
 # PES ASIC CLASS Notes
 This repository contains notes for the process of complete ASIC flow.
-<br>*(FACULTY : Mahesh Awati, GUIDE : Kunal Ghosh)*
+<br>**FACULTY** : Mahesh Awati
+<br>**GUIDE** : [Kunal Ghosh](https://github.com/kunalg123/)
+
+
 
 ## Introduction
 ```ASCII
