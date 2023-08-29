@@ -16,3 +16,13 @@ Verilog code allows designers to test and verify digital designs through simulat
 
 6. **Clock and Edge:** The clock is a timer for a circuit. The edges (rising or falling) of the clock signal trigger actions.
 
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/2267a650-e0b9-45b6-aa48-4328befd5836)
+clone the repo [sky130RTL](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git). Go to the verilog files directory and run the good_mux.v along with its testbench.
+Running a.out generates the dumpfile.
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9d72246c-069e-4fb3-b55f-5da7c7a4d18a)
+Running the vcd file on GTK wave
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a009009e-82d4-4b12-88a8-8ce086de9897)
+good_mux and testbench for good_mux
