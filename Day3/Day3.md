@@ -49,6 +49,9 @@ Invoke Yosys and read the library
 **You can view the design by typing show.**<br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/af099ecd-6683-412b-b281-5f179ae48200)
 
-
-
-
+**Generated netlist can also be viewed.**
+```
+write_verilog good_mux_netlist.v
+!vim good_mux_netlist.v
+```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/32d3b0c1-daab-4964-9f8b-0e9b3a3606e3)
