@@ -1,4 +1,4 @@
-# Day 2
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c20a8ffd-a9ed-408b-99fd-8689bb5bfa48)# Day 2
 
 # Lab 2
 ### RISC-V Instructions:
@@ -102,4 +102,30 @@ riscv64-unknown-elf-gcc -01 -mabi=lp64 -march=rv64i -o 1to9.o 1to9.c load.S
 spike pk -o 1to9.o 
 ```
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a7011089-51c3-4d25-8c3b-9f71180b3065)
+
+# C code on a RISC V CPU
+
+Clone this repo to get started.
+```
+git clone https://github.com/kunalg123/riscv_workshop_collaterals.git
+```
+cd into the labs directory within the repo, and then make the rv32im.sh an executeable
+```
+chmod 777 rv32im.sh
+./rv32im.sh
+```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/5e4ea274-3f5a-4635-8e38-6487d6988151)
+- First taking a look at the rv32im.sh file, we can see that we first compile the 1to9.c code using 32 bit arch. We also compile the load.S file.
+- Next Syscalls.c is compiled.
+- We then link the load.o and 1to9_custom.c into a firmware.elf file.
+- start.elf is compiled, and then converted to verilog.
+- Same is done with firmware.
+- Next we concatenate verilog files and generate a firmware hex file.
+- The 8 bit hex file is converted to a 32 bit hex file.
+- A testbench is compiled and finally, executed.
+
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/95a6976a-5e41-4721-bbed-8ab0e21421e7)
+
+
 
