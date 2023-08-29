@@ -18,14 +18,15 @@ Verilog code allows designers to test and verify digital designs through simulat
 
 ## GTK Wave labs
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/2267a650-e0b9-45b6-aa48-4328befd5836)
-clone the repo [sky130RTL](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git). Go to the verilog files directory and run the good_mux.v along with its testbench.
+<br>
+Clone the repo [sky130RTL](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git). Go to the verilog files directory and run the good_mux.v along with its testbench.
 Running a.out generates the dumpfile.
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9d72246c-069e-4fb3-b55f-5da7c7a4d18a)
-Running the vcd file on GTK wave
+**Running the vcd file on GTK wave**
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a009009e-82d4-4b12-88a8-8ce086de9897)
-good_mux and testbench for good_mux
+**good_mux and testbench for good_mux**
 
 ## Intro to Yosys
 ### Yosys - an RTL Synthesis Framework for Digital Design
@@ -33,17 +34,19 @@ It is an essential tool in the realm of digital design, focusing on RTL (Registe
 
 Invoke Yosys and read the library
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/196bb4a5-b0fd-42f3-bf34-976dcc93a0d1)
-
-Synthesize the design
+<br>
+**Synthesize the design**
+<br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/70ce6f9f-8e74-46c3-9944-0f04a76aabe3)
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ddf0e587-c596-4032-afce-f4bac1dcfa1e)
-
-Generate the netlist
+<br>
+**Generate the netlist**
+<br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a37baee7-b11a-4888-b9fc-f05c16e6f693)
-
+<br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/903f447c-fae0-4491-afdf-4838fc452268)
 
-You can view the design by typing show.
+**You can view the design by typing show.**<br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/af099ecd-6683-412b-b281-5f179ae48200)
 
 
