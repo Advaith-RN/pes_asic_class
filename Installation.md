@@ -1,5 +1,5 @@
 # Installation of tools
-
+## RISCV Toolchain
 Install Dependencies and assign a variable current_dir to your working directory 
 ```bash
 sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev git libexpat1-dev gtkwave -y
@@ -19,6 +19,7 @@ Add toolchain to path
 ```bash
 export PATH=$current_dir/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH
 ```
+## SPIKE
 Download SPIKE tool and dependencies
 ```bash
 sudo apt-get install device-tree-compiler -y
@@ -39,6 +40,7 @@ Make and install Spike
 make
 sudo make install  
 ```
+## RISCV pk
 Go back to the risc_v_toolchain directory and clone the risc V proxy kernel and bootloader
 ```bash
 git clone https://github.com/riscv/riscv-pk.git
@@ -56,6 +58,7 @@ Add it to Path
 ```bash
 export PATH=$current_dir/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
 ```
+## IVerilog
 Go back to the riscv main directory and clone into the iverilog repository
 ```bash
 cd $current_dir/riscv_toolchain
@@ -80,6 +83,26 @@ Add to PATH and refresh the bashrc
 echo 'export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH' >> ~/.bashrc
 echo 'export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
+```
+## YoSys
+Clone Yosys into the home directory and cd into it
+```bash
+cd
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+```
+Yosys requires the following libraries to be installed.
+```bash
+sudo apt-get install build-essential clang bison flex  libreadline-dev gawk tcl-dev libffi-dev git  graphviz xdot pkg-config python3 libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev
+```
+Make and install it
+```
+make
+sudo make install
+```
+## GTK Wave
+```
+sudo apt install gtkwave
 ```
 
 
