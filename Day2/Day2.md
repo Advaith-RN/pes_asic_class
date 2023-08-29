@@ -65,7 +65,7 @@ RISC-V instructions have a common structure with several fields that serve diffe
 
 ## ASM calls in C
 
-Create a C file, 1to9.c.
+Create a C file, [1to9.c](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day2/1to9.c).
 ```c
 #include<stdio.h>
 
@@ -79,7 +79,7 @@ int main(){
   printf("Sum of numbers from 1 to %d = %d/n", count, result);
 }
 ```
-In the same directory, we have our load function, load.S in assembly.
+In the same directory, we have our load function, [load.S](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day2/load.S) in assembly.
 ```asm
 .section .text
 .global load
