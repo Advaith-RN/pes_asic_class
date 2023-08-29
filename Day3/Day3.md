@@ -16,7 +16,7 @@ Verilog code allows designers to test and verify digital designs through simulat
 
 6. **Clock and Edge:** The clock is a timer for a circuit. The edges (rising or falling) of the clock signal trigger actions.
 
-
+## GTK Wave labs
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/2267a650-e0b9-45b6-aa48-4328befd5836)
 clone the repo [sky130RTL](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git). Go to the verilog files directory and run the good_mux.v along with its testbench.
 Running a.out generates the dumpfile.
@@ -26,3 +26,26 @@ Running the vcd file on GTK wave
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a009009e-82d4-4b12-88a8-8ce086de9897)
 good_mux and testbench for good_mux
+
+## Intro to Yosys
+### Yosys - an RTL Synthesis Framework for Digital Design
+It is an essential tool in the realm of digital design, focusing on RTL (Register-Transfer Level) synthesis. This open-source framework takes high-level hardware descriptions, often penned in Verilog or SystemVerilog, and converts them into gate-level representations. This enables designers to optimize, analyze, and further implement these designs in actual digital circuits.
+
+Invoke Yosys and read the library
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/196bb4a5-b0fd-42f3-bf34-976dcc93a0d1)
+
+Synthesize the design
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/70ce6f9f-8e74-46c3-9944-0f04a76aabe3)
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ddf0e587-c596-4032-afce-f4bac1dcfa1e)
+
+Generate the netlist
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a37baee7-b11a-4888-b9fc-f05c16e6f693)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/903f447c-fae0-4491-afdf-4838fc452268)
+
+You can view the design by typing show.
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/af099ecd-6683-412b-b281-5f179ae48200)
+
+
+
+
