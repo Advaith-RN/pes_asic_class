@@ -41,6 +41,9 @@ Invoke Yosys and read the library
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ddf0e587-c596-4032-afce-f4bac1dcfa1e)
 <br>
 **Generate the netlist**
+```
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+```
 <br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a37baee7-b11a-4888-b9fc-f05c16e6f693)
 <br>
