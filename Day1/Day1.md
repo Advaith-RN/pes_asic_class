@@ -40,7 +40,6 @@ cat lab1/sum1ton.c
 
 Gives the output ```Sum from 1 to 50 = 1275```
 
-
 ### C to Disassembly 
 
 - To generate a RISC-V object file we need to use the  ```riscv64-unknown-elf-gcc``` command
