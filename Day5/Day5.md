@@ -41,3 +41,49 @@ abc -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9faf7359-d13f-4a3a-a40e-75a67d56fd64)
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/0f96bf07-de8b-4196-adee-2bc6b8b9230f)
+
+### opt_check2.v
+Our second program consists of a 2:1 MUX, where if ```a == 1, y = a``` else ```y=b```.
+Essentially, ```y = a + a'.b```, which is ```y = a +b```
+This is the **Absorption law**. 
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ecfebe5e-0bb9-4deb-a3b4-27cb162f4a02)
+
+Synthesizing the design using the same steps as shown above,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/33263ff8-7449-4ff6-a00b-c4cca2b42ae1)
+
+From the above stats, we can confirm an **OR** gate was generated. We execute an ```opt_clean -purge``` before linking the library files again.
+```
+abc -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a780a335-bb86-4349-9851-ce10b07bcd68)
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9e795c1f-da0c-49f7-b5d7-916ef3db1854)
+
+### opt_check3.v
+
+**opt_check3.v** consists of two 2:1 MUXes. The output of the first MUX connects as an input to the second MUX.
+When ```a == 1```, the second MUX is chosen, else it ```y = 0```.
+The second MUX chooses b if ```c == 1``` else it chooses 0.
+The final equation boils down to ```y = a'.0 + a.(c'.0 + c.b) = a.b.c```
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/750dc27c-b99a-49ff-ae74-24f506717650)
+
+Going through the entire synthesis flow again,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c0b3a3f0-f31a-4024-aafc-f8e1094531c6)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/d3148b1a-3182-4e67-94e9-4e912b8b6484)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/1e31017a-a498-4cd5-9a1a-19d0dff5e3f6)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/f940119c-8475-4e38-9a1a-37b4dbd5aa95)
+
+As we can see the design matches ```y = a.b.c```
+
+### opt_check4.v
+
+
+
+
+
