@@ -82,8 +82,23 @@ Going through the entire synthesis flow again,
 As we can see the design matches ```y = a.b.c```
 
 ### opt_check4.v
+The equation for the fourth program before simplification is ```y = a?(b?(a & c ):c):(!c)```.
+- ```bac + b'c = y1```
+- ```ay1 + a'c' = y2```
+- ```a(bac + b'c) + a'c' = y2```
+- ```abc + ab'c + a'c' = y2```
+- ``` ac + a'c' = y2```
 
+Essentially, the final equation is independant of b, and is an XNOR gate.
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/20f44c2a-4ced-46aa-9194-a3c53338675c)
 
+Synthesizing this design,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/f7f50ad2-0a3b-40b9-a4db-2b79c3776380)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/937f9bb5-5b8b-4d4d-be17-f6a1cfba413a)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/bb928df2-cc9f-4736-af7a-0a85a86a5966)
+
+As we can see, the 2-input XNOR is generated, and the final equation is independant of b.
