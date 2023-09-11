@@ -69,4 +69,57 @@ This approach, where we compartmentalize the synthesis of sub modules is essenti
 - Multiple instances of the same module will not require to be synthensized each time.
 
 # Flop Coding Styles and Optimization
+To mitigate potential glitch-related issues stemming from gate propagation delays, we implement flip-flops at the conclusion of each combinational block. These flip-flops serve the dual purpose of preserving the initial value and preventing glitches from occurring.
+<br>
+### D Flip Flop with asynchronous set
+Now synthesizing the asynchronous set D Flip Flop<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/cf464353-9efc-49dc-9714-f93d2bf5c128)
+```
+read_verilog dff_async_set.v
+synth -top dff_aync_set
+```
+As we are synthesizing a d flip flop, we are to use a keyword here, dfflibmap.
+```
+dfflibmap -liberty ../sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+<br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/0f6ca901-51ba-4a14-8a0a-cdb91eb65f3a)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b290e16f-8d07-47a4-8927-6502e368c909)
+
+We can view the design by executing
+```
+show dff_async_set
+```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ef3bb084-6cc5-4145-849c-11330f3d41b2)
+
+
+
+### D Flip Flop with asynchronous reset
+As we synthesized the above design, let us also do the same for the dff_asyncres.v file.<br><br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/d5e02080-ec75-4675-a7bb-3bae8bb7bc13)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9cefd819-a656-4182-94a2-a3e189164747)
+
+Additionally, we can view the timing diagram of our design by running gtk wave.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/784e7979-464a-4a78-8edb-cc0ee634f9c7)
+<br>
+As we can see on gtkwave, whenever the clk is high and the async_reset is high, it resets the output to 0 always. <br>
+
+### D Flip Flop with synchronous reset
+Synthesizing the D Flip Flop with synchronous reset,
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/87828af5-5f0a-4daa-a2ba-71605cbffad2)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/3af7a040-bd26-4b9f-82f2-061595e356dd)
+
+
+## Interesting Optimizations
+
+
+
 
