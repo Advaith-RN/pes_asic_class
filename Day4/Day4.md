@@ -119,7 +119,54 @@ Synthesizing the D Flip Flop with synchronous reset,
 
 
 ## Interesting Optimizations
+Lets take a look at mul2.v<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/58a3b74a-05ce-42d0-9539-1b6c6d51c4b9)
+<br>
+This takes in a 3 bit input and gives a 4 bit output. 
+- Taking an example of input 3 -> 3b'011
+- 3 * 2 = 6, which is 4'b0110
+- Essentially, it has a 0 appended to it.
+Let us synthesize this design.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8bfd4686-0773-46b5-a5af-f38c624f9d94)
 
+After executing ```abc -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib ```<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c16358ef-01c2-453a-bc60-300fd83f525c)
+
+- We can see there is no hardware generated.
+- Additionally, there is nothing to link to.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/e2fbadde-ec9c-4df9-be73-baae26214a1b)
+
+To generate the netlist file,
+```
+write_verilog -noattr mul2_net.v
+```
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b0b48285-e73d-40b0-add8-e40646ab14dd)
+
+We can see that a 0 is appended to a.
+
+
+Now lets take a look at mult_8.v<br><br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/12a00962-8c07-404b-ab46-1058c145f2b4)
+<br>
+This takes in a 3 bit input and gives a 6 bit output. 
+- The relationship between a and y is -> ```a*9 = y```.
+- This can be interpreted as ```(a8) + (a1) = y```.
+- Essentially, y is a concatenation of 'aa'.
+Let us synthesize this design as well.
+<br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/48177019-f015-486c-a230-8a4944fcdfe4)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/0579d0ea-4e3d-4e32-bbf9-3a8dbec238d4)
+
+The netlist file yields:
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/1c91b9ff-5e1f-4fbb-b898-fec3dfd01e3b)
+
+As we can see y is a concatenation of 'aa'.
 
 
 
