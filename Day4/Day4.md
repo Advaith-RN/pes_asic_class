@@ -163,7 +163,7 @@ Let us synthesize this design as well.
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/0579d0ea-4e3d-4e32-bbf9-3a8dbec238d4)
 
-The netlist file yields:
+The netlist file yields: <br><br>
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/1c91b9ff-5e1f-4fbb-b898-fec3dfd01e3b)
 
 As we can see y is a concatenation of 'aa'.
