@@ -108,16 +108,42 @@ This is a normal 2:1 MUX. When ```sel == 1```, ``` y = i1 ```. Else it is ```i0`
 <br>There is a mismatch in simulation and synthesis.
 
 ### Simulation and Synthesis mismatch for Blocking statement
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c150af14-f34c-4e71-9064-223be44d6d95)
 
+The program is elementary, it represents a simple OR and AND operation.
+- x is computed via ```x = a | b```
+- d or the output is ``` x & c```
+- But the statement ```d = x & c``` is a blocking statement.
+- Hence, x is a flopped output. d's value is dependant on x's old value.
 
+Upon generating the waveform,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/80562ce2-9f89-4602-b5d2-08e2cd2fa5ec)
 
+- At the marked point, we can see that ```a = 0``` and ```b = 0```.
+- Hence ```x = 0``.
+- This must mean that ```d = 0```.
+- But at the marked point, d is 1. Hence d is using older values of a and b.
+- Due to this blocking statement, out design is not behaving as expected.
 
+Synthesizing the design, <br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b518f218-1295-47c3-85e6-4c0f043c8e7a)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b697e3be-b726-413e-8aa1-e6e34efbaec8)
 
+The OR gate and AND gate is generated. Generate the netlist as well.<br><br>
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/f8ee945d-6bf9-4869-9dae-2d2c2e55ecb7)
 
+Now performing GLS, <br><br>
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/88046299-8250-457e-a748-ada2c2a1fe63)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c7db84bd-5132-4efc-b265-ae8277ca5667)
+
+At the selected point, ```a = 0``` and ```b = 0```.
+- Hence, ```x = 0```.
+- Therefore, ```d = 0```. Results are mismatched. 
 
 
 
