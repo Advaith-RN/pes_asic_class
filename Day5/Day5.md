@@ -292,7 +292,7 @@ An inverter is present as synthesis expects an **active low reset**, but we have
 
 ## Sequential Optimizations for Unused Output
 
-### counter_opt.v
+### 1. counter_opt.v
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/320a082c-b23b-42d3-a36e-8f29a4131b75)
 
 This is the design for a 3 bit up counter. The output prioritizes only 1 bit.
@@ -312,6 +312,19 @@ There is only one Flop present in the design.
 -  Q is also connected to an inverter that is fed back into out input.
 -  The unused bits are optimized.
 
+### 2. counter_opt2.v
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/7f7eaf6e-f51d-4803-b846-bc874ddae4db)
 
+This program is a modified version of the previous one. All three bits are mapped, so we can expect three flops on synthesis.
 
+<br><br>
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/640a6014-ca7b-4bd3-98e7-713b7fa1540d)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b7c5c592-6872-4bb0-b472-df88fda30594)
+
+There are 3 flops synthesized. 
+- Each flop has a bit connected to it.
+- Each bit is coming to the adder logic present in the middle of the design.
+- The NOR gate from which Q exits has connections from all three input bits.
+- The output is ```Q = count[2].count[1]'.count[0]'```
