@@ -35,4 +35,6 @@ In summary, synthesis simulation mismatches can arise due to differences in how 
 
 Let's take a look at a few programs.
 
+### Ternary Operator
+
 
