@@ -43,3 +43,4 @@ ____System Software____
 ### 3. [Introduction to Verilog RTL Design and Synthesis](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day3/Day3.md)
 ### 4. [Introduction to Timing libs](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day4/Day4.md)
 ### 5. [Introduction to Optimizations](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day5/Day5.md)
+### 5. [GLS Synthesis Simulation Mismatch and Blocking NonBlocking Statements](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day6/Day6.md)
