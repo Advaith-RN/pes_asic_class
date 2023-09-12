@@ -111,11 +111,6 @@ Taking a look at multiple_module_opt.v, we can check the equation to be:
 - ```n3 = b^d```
 - ```y = c + b.a```
 
-![[Pasted image 20230912102848.png]]
-
-![[Pasted image 20230912103008.png]]
-
-
 
 
 
