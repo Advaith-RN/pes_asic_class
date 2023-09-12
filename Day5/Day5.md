@@ -265,7 +265,30 @@ Our synthesized design in yosys should yield outputs connected to 1.
 
 Both Q and Q1 map to 1 directly.
 
+### 5. dff_const5.v
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c5316825-afbe-490e-a211-bc6e34fa02cf)
 
+Analyzing on gtkwave, <br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/3c3dd6e9-b805-4ace-99ef-3e1a67ada27b)
+
+- When the reset is high, both Q1 and Q are low.
+- When the reset is low, Q1 becomes high on the positive edge of the clock.
+- Q1 essentially remains at 0 during the positive edge of the clock.
+- Q remains 0 for that cycle.
+- Q's value goes high one cycle late compared to Q1.
+
+Synthesizing the design with yosys we get,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/3167650a-5ec7-40d9-b14b-2704c03647bb)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8e05e871-b009-4841-9c39-4b96b31d4a1b)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/89602f23-e2e0-4eae-91a8-cc98e4ff80a0)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/75f16327-9ed2-4af3-ae12-ed3df6f6b62d)
+
+The output consists of 2 flops. They both have the same clock and reset, and the output of the first is fed into the input of the second.
+An inverter is present as synthesis expects an **active low reset**, but we have an **active high reset.**
 
 
 
