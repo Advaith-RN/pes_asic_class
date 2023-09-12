@@ -68,5 +68,56 @@ write_verilog -noattr ternary_operator_mux_net.v
 ```
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/74f4761a-cefb-4ac6-8ee0-5ceb3dc866ed)
 
+To read the design and test bench, we must invoke the libraries with the respective cells and map the netlist commands to them. We can do this by running,
+```
+iverilog ../mylib/primitives.v ../mylib/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+```
+Execute ```./a.out``` to generate the vcd file.
+Now viewing the vcd file with GTKWave, <br><br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/aa799669-9dae-49d0-8a4c-a981ee1d6a2e)
+
+This waveform validates that when ```sel == 1``` -> ```y = i1```, else ``` y = i0 ```.
+
+### Simulation and Synthesis mismatch
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/f0f74db2-218d-464a-89fa-3069fe5c8fa5)
+
+Consider a simple 2:1 MUX, that depends only on the select line. View its waveform usig GTKWave. <br><br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/639ec631-36bc-44ef-9bb7-ada5dc175831)
+
+This waveform is reminescent of flop behavior. Now, synthesize the design. <br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/5704542a-f628-4e29-8d6b-a3daa0cca487)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6cdbc782-36d2-4092-b234-9dd8c3b17a3b)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6586dbab-f247-45b7-ad71-04b1ce68d3cb)
+
+Remember to generate the netlist as well, for GLS,<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/d5f1f4a1-609f-449f-a0f7-7b40cd8a89a5)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b514cebf-a10e-4293-a631-1aee1b8588ce)
+
+Repeating the above steps to generate waveform using the netlist,
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/109813f9-c4ef-4561-b6bb-ca2c4a7beca8)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/25972911-aef8-456b-945b-9836be477d28)
+
+This is a normal 2:1 MUX. When ```sel == 1```, ``` y = i1 ```. Else it is ```i0```.
+<br>There is a mismatch in simulation and synthesis.
+
+### Simulation and Synthesis mismatch for Blocking statement
+
+
+
+
+
+
+
+
+
+
+
 
 
