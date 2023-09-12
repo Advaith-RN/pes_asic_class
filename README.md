@@ -38,8 +38,8 @@ ____System Software____
 - GDS : Layout
 
 ## Course Content
-### 1. [RISCV ISA and GNU Compiler toolchain](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day1/Day1.md)
-### 2. [Introduction to ABI and Basic Verification Flow ](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day2/Day2.md)
+### 1. [RISC-V ISA and GNU Compiler toolchain](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day1/Day1.md)
+### 2. [Introduction to ABI and Basic Verification Flow](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day2/Day2.md)
 ### 3. [Introduction to Verilog RTL Design and Synthesis](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day3/Day3.md)
 ### 4. [Introduction to Timing libs](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day4/Day4.md)
 ### 5. [Introduction to Optimizations](https://github.com/Advaith-RN/pes_asic_class/blob/main/Day5/Day5.md)
