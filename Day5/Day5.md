@@ -247,4 +247,25 @@ Now, to synthesize the design,
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/259ca815-243b-4062-b3aa-f6340104a3fb)
 
 ### 4. dff_const4.v
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/7bc9a669-b763-4b9a-be05-373656bd9c57)
+This design has also has 2 D Flip Flops.
+Lets analyze the waveform simulation. <br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/3ade7d09-b88c-4ab7-a999-e64cdbf39579)
+
+The output of q is always 1, regardless of clock and reset.
+Our synthesized design in yosys should yield outputs connected to 1.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/44bf01f4-7e60-4e33-99b7-86a61805fe5c)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/3b89ed7e-7454-40ea-a5f8-0c54f446eb3e)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/179b6b4f-f8ac-496e-9b4e-0a7bc45f9fdb)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/0710322c-b224-4e30-a2ae-32eea785c487)
+
+Both Q and Q1 map to 1 directly.
+
+
+
+
 
