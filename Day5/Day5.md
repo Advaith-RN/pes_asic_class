@@ -123,9 +123,25 @@ Before running ```opt_clean -purge```, we run ```flatten```. This ensures consta
 
 As we can see, the final output is independent of d and is represented by the equation ```y = c + b.a```.
 
+### 6. multiple_module_opt2.v
+Deriving the equation for this design,
+- ```n1 = a.0 = 0```
+- ```n2 = b.c```
+- ```n3 = b.c.d```
+- ```y = b.c.d.0 = 0```
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8a783a1d-691e-4601-89a0-b4fc3336665a)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/3f69c9e3-0b6f-47d9-8f31-b66c94927f2c)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/c53fa5c1-8a01-4cea-a7ee-5d5a49a6c20d)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/cb0aafcc-e121-4575-a47f-9a6419cabedb)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6b49a293-d5ec-483f-8769-aaa726cb9e87)
+
+The design for program 6 shows the result ```y = b.c.d.0 = 0``` clearly.
+```y``` is independent of all other inputs. 
 
 
 
