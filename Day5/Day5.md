@@ -110,10 +110,18 @@ Taking a look at multiple_module_opt.v, we can check the equation to be:
 - ```n2 = n1 ^ 0```
 - ```n3 = b^d```
 - ```y = c + b.a```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/48107241-ddd5-4083-92e8-e0d9133e8421)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/4995eee0-e517-4ea2-a23a-702da0bd3800)
 
+Before running ```opt_clean -purge```, we run ```flatten```. This ensures constant propogation and removes hierarchies when we display the final design.
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/5b10578a-65b1-4f24-a2c1-ece59336385c)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a30f2bc2-a143-43a9-a7e3-665f47586b37)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ba1ee154-b59c-43a1-847b-a5fb1edbbe62)
+
+As we can see, the final output is independent of d and is represented by the equation ```y = c + b.a```.
 
 
 
