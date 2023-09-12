@@ -290,5 +290,28 @@ Synthesizing the design with yosys we get,
 The output consists of 2 flops. They both have the same clock and reset, and the output of the first is fed into the input of the second.
 An inverter is present as synthesis expects an **active low reset**, but we have an **active high reset.**
 
+## Sequential Optimizations for Unused Output
+
+### counter_opt.v
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/320a082c-b23b-42d3-a36e-8f29a4131b75)
+
+This is the design for a 3 bit up counter. The output prioritizes only 1 bit.
+Let us synthesize the design.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8e13ee5d-1a58-4e7c-b6c4-3dc1bfce3719)
+
+Remember to execute ```dfflibmap -liberty ../sky130_fd_sc_hd__tt_025C_1v80.lib``` as our design contains flip flops.
+<br><br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6ba4a3c6-764d-4785-b6b4-917c21fb64f3)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6fd31c66-6fa0-4e2c-8e97-2d023d5674f6)
+
+There is only one Flop present in the design.
+-  Q is connected to bit 0, which is the count.
+-  Q is also connected to an inverter that is fed back into out input.
+-  The unused bits are optimized.
+
+
 
 
