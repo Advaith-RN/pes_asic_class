@@ -10,7 +10,7 @@
 ## Combinational Logic Optimizations
 Taking a look at 5 different programs here:
 
-### opt_check.v
+### 1. opt_check.v
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a1bf470d-c02e-4a8b-94b7-bbdf74edbff4)
 
 
@@ -42,7 +42,7 @@ abc -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/0f96bf07-de8b-4196-adee-2bc6b8b9230f)
 
-### opt_check2.v
+### 2. opt_check2.v
 Our second program consists of a 2:1 MUX, where if ```a == 1, y = a``` else ```y=b```.
 Essentially, ```y = a + a'.b```, which is ```y = a +b```
 This is the **Absorption law**. 
@@ -60,7 +60,7 @@ abc -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a780a335-bb86-4349-9851-ce10b07bcd68)
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/9e795c1f-da0c-49f7-b5d7-916ef3db1854)
 
-### opt_check3.v
+### 3. opt_check3.v
 
 **opt_check3.v** consists of two 2:1 MUXes. The output of the first MUX connects as an input to the second MUX.
 When ```a == 1```, the second MUX is chosen, else it ```y = 0```.
@@ -81,7 +81,7 @@ Going through the entire synthesis flow again,
 
 As we can see the design matches ```y = a.b.c```
 
-### opt_check4.v
+### 4. opt_check4.v
 The equation for the fourth program before simplification is ```y = a?(b?(a & c ):c):(!c)```.
 - ```bac + b'c = y1```
 - ```ay1 + a'c' = y2```
@@ -101,4 +101,28 @@ Synthesizing this design,
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/bb928df2-cc9f-4736-af7a-0a85a86a5966)
 
-As we can see, the 2-input XNOR is generated, and the final equation is independant of b.
+As we can see, the 2-input XNOR is generated, and the final equation is independent of b.
+
+### 5. multiple_module_opt.v
+
+Taking a look at multiple_module_opt.v, we can check the equation to be:
+- ```n1 = a.1```
+- ```n2 = n1 ^ 0```
+- ```n3 = b^d```
+- ```y = c + b.a```
+
+![[Pasted image 20230912102848.png]]
+
+![[Pasted image 20230912103008.png]]
+
+
+
+
+
+
+
+
+
+
+
+
