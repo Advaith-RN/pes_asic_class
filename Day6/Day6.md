@@ -36,5 +36,37 @@ In summary, synthesis simulation mismatches can arise due to differences in how 
 Let's take a look at a few programs.
 
 ### Ternary Operator
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8725f946-3790-4e8b-b946-92e4b2fdd7e9)
+
+This is a simple 2:1 with a select line.
+Analyzing this on GTKWave,
+```
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v    # Read design
+
+./a.out      # generate vcd
+
+gtkwave tb_ternary_operator_mux.vcd      # run GTKWave
+```
+<br><br>
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/34499bf5-8a95-405f-9e60-d906e59d83c6)
+
+In the waveform, we can see that when ```sel == 1```, ```y = i1```, else ``` y = i0 ```.
+Synthesizing this design yields the following outputs.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/7f3dcfb2-537c-4b51-8c68-5d534a44cd90)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6aa89556-eae1-41c6-bc6c-9944449b5d04)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8ae682b7-37c7-4da2-82f5-6e76e5477888)
+
+2:1 MUX is synthesized.
+<br>
+Now, to perform GLS,first generate the netlist file;
+```
+write_verilog -noattr ternary_operator_mux_net.v
+```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/74f4761a-cefb-4ac6-8ee0-5ceb3dc866ed)
+
 
 
