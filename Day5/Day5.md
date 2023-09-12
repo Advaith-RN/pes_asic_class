@@ -190,6 +190,37 @@ show dff_const1    # view design
 
 An inverter is used to implement the active high reset.
 
-### 1. dff_const2.v
+### 2. dff_const2.v
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/4ea30fe5-a84f-47df-b5b5-3019d802b7e9)
+
+This is also a D Flip Flop with a reset. It is set to 1.
+- If Reset is 1, output is 1.
+- If Reset if 0, output remains 1.
+- Essentially, output is always 1.
+
+Looking at the waveform simulation,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/fb5e5f0a-0d18-475e-8c7a-bc6cb42be904)
+
+Output is always 1.
+<br>
+Now to synthesize the design.
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8c884718-7c2d-4182-8b0c-89699f18306e)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/17e7c366-9fed-4d85-bbfd-6afe89baf66a)
+
+Again, executing ```dfflibmap -liberty ../sky130_fd_sc_hd__tt_025C_1v80.lib```, <br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/ec48dc6b-5102-44ca-a30f-4076268815a3)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/742b4280-dd70-41bf-9409-bd7e60d8cf16)
+
+Here, we notice that the libraries don't get linked, as no cells are generated.
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6b6a28cc-e7de-44f1-802b-71684c377c46)
+
+Output is always once, and we can see the design maps it accordingly.
+
+### 3. dff_const3.v
 
 
