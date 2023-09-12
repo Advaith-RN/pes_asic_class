@@ -180,7 +180,16 @@ abc -liberty  ../sky130_fd_sc_hd__tt_025C_1v80.lib    # Link library files
 show dff_const1    # view design
 ```
 <br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/a573d8ed-6817-4cce-a8f8-02b123d510b5)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/5c64f990-4ba6-4e63-a520-6841b54fb410)
 
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/bccfa26d-abf9-48b2-8d23-3810e412db99)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8a3c083d-50e2-460c-9eed-dddd9cbc89f1)
+
+An inverter is used to implement the active high reset.
+
+### 1. dff_const2.v
 
 
