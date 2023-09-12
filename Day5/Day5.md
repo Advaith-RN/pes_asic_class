@@ -143,5 +143,44 @@ Deriving the equation for this design,
 The design for program 6 shows the result ```y = b.c.d.0 = 0``` clearly.
 ```y``` is independent of all other inputs. 
 
+## Sequential Logic optimizations
+
+### 1. dff_const1.v
+This program is for a D Flip Flop with a reset.
+- D = 1 always
+- If Reset is active, output is 0
+- If Reset is inactive, output is 1 on the **positive edge of the clock.**
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/8bf2fe52-7bc6-4a3b-b0b2-75946dc32fd0)
+
+First, let us view the waveform simulation, using iverilog and GTKWave.
+```
+iverilog dff_const1.v tb_dff_const1.v
+```
+To generate vcd file, execute ```./a.out```. Open the vcd file on GTKWave.
+```
+gtkwave tb_dff_const1.vcd
+```
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/d2222cca-6d63-4562-a1e4-b1f50572e7b4)
+
+As we can see, the results are verified in the diagram.
+Its time to synthesize the design.
+<br>
+As per the usual flow, we open yosys.
+```
+read_liberty -lib ../sky130_fd_sc_hd__tt_025C_1v80.lib   # Read lib
+
+read_verilog dff_const1.v    # Read the file and then synthesize
+sythn -top dff_const1
+  
+dfflibmap -liberty ../sky130_fd_sc_hd__tt_025C_1v80.lib     # As we are working with flip flops
+
+abc -liberty  ../sky130_fd_sc_hd__tt_025C_1v80.lib    # Link library files 
+
+show dff_const1    # view design
+```
+<br><br>
+
+
 
 
