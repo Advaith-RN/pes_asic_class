@@ -32,3 +32,7 @@ A synthesis simulation mismatch can occur for various reasons, including the fol
      - The values computed on the RHS are then assigned to the left-hand side (LHS) variables concurrently.
 
 In summary, synthesis simulation mismatches can arise due to differences in how Verilog constructs are interpreted during simulation versus synthesis, such as sensitivity list handling and the distinction between blocking and non-blocking assignments. These nuances highlight the importance of careful coding practices to ensure consistent behavior between simulation and synthesis.
+
+Let's take a look at a few programs.
+
+
