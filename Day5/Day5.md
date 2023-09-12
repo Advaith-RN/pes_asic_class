@@ -219,8 +219,32 @@ Here, we notice that the libraries don't get linked, as no cells are generated.
 
 ![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6b6a28cc-e7de-44f1-802b-71684c377c46)
 
-Output is always once, and we can see the design maps it accordingly.
+Output is always 1, and we can see the design maps it accordingly.
 
 ### 3. dff_const3.v
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/b362a1b5-812e-493e-8f7a-b1c79072498d)
 
+This design has 2 D Flip Flops
+- The output of the first is connected to the input of the second.
+- Their reset and clock is the same.
+
+Our waveform simulation shows this result,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/540c1f49-ee72-4368-bf1c-4b045da7c41c)
+<br>
+- Q only becomes low for one cycle due to Clock to Q delay.
+- Q1 becomes high after a slight delay when the clock has a postive edge
+- Q remains 0 during the delay, changing at the next positive edge of the clock.
+
+Now, to synthesize the design,
+<br><br>
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/6f8e6ebd-b3a6-411c-bdbb-90666f0d90d6)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/56ff5ec4-882a-4074-886c-098b33bd1cc3)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/cb40da51-cea3-4163-b377-27e569f8a332)
+
+![image](https://github.com/Advaith-RN/pes_asic_class/assets/77977360/259ca815-243b-4062-b3aa-f6340104a3fb)
+
+### 4. dff_const4.v
 
