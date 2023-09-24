@@ -28,7 +28,7 @@ This repository contains notes for the process of complete ASIC flow.
 - Format used in the semiconductor industry to represent the layout and design of integrated circuits at a highly detailed level. GDSII files contain information about the geometric shapes, layers, masks, and other essential details that make up the physical layout of a chip.
 - Tools : Klayout, Magic
 
-##### The Hardware needs to understand what the Application software is saying it to do.This relation can be eshtablished by System Software
+##### The Hardware needs to understand what the Application software is saying it to do.This relation can be estabalished by System Software
 
 ____System Software____
 - OS : Operating System : Handles IO, memory allocation, Low level system function
